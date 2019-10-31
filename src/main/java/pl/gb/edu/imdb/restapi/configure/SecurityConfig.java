@@ -1,4 +1,4 @@
-package pl.gb.edu.imdb.configure;
+package pl.gb.edu.imdb.restapi.configure;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

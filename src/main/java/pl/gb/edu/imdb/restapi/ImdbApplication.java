@@ -1,12 +1,11 @@
-package pl.gb.edu.imdb;
+package pl.gb.edu.imdb.restapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ImdbApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(ImdbApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(ImdbApplication.class, args);
+    }
 }

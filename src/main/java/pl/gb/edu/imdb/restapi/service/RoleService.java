@@ -1,12 +1,12 @@
-package pl.gb.edu.imdb.service;
+package pl.gb.edu.imdb.restapi.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import pl.gb.edu.imdb.model.Role;
-import pl.gb.edu.imdb.resource.RoleResource;
+import pl.gb.edu.imdb.restapi.model.Role;
+import pl.gb.edu.imdb.restapi.resource.RoleResource;
 
 import java.util.List;
 

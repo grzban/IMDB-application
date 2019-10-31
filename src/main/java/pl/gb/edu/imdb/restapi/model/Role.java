@@ -1,4 +1,4 @@
-package pl.gb.edu.imdb.model;
+package pl.gb.edu.imdb.restapi.model;
 
 import lombok.Getter;
 import lombok.Setter;

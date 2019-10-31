@@ -1,4 +1,4 @@
-package pl.gb.edu.imdb.model;
+package pl.gb.edu.imdb.restapi.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,11 +11,12 @@ import javax.persistence.Table;
 @Entity
 @Getter
 @Setter
-@Table(name = "actors")
-public class Actor {
+@Table(name = "movies")
+public class Movie {
     @Id
     private long id;
-
+    @Column(columnDefinition = "text")
+    private String title;
     @Column
-    private String name;
+    private String year;
 }
