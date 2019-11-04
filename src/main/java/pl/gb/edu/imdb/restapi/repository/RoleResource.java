@@ -1,4 +1,4 @@
-package pl.gb.edu.imdb.restapi.resource;
+package pl.gb.edu.imdb.restapi.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

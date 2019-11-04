@@ -1,3 +1,4 @@
+/*
 package pl.gb.edu.imdb.restapi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,3 +28,4 @@ public class MovieRestController {
         return movieService.getMovieById(id);
     }
 }
+*/
