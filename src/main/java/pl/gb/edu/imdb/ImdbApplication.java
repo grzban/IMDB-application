@@ -1,4 +1,4 @@
-package pl.gb.edu.imdb.restapi;
+package pl.gb.edu.imdb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

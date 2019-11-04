@@ -6,7 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import pl.gb.edu.imdb.restapi.model.Movie;
-import pl.gb.edu.imdb.restapi.resource.MovieResource;
+import pl.gb.edu.imdb.restapi.repository.MovieResource;
 
 @Service
 public class MovieService {
