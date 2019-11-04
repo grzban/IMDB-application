@@ -1,10 +1,7 @@
 package pl.gb.edu.imdb.restapi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.gb.edu.imdb.restapi.model.Movie;
 import pl.gb.edu.imdb.restapi.service.MovieService;
 
@@ -20,8 +17,8 @@ public class MovieRestController {
         this.movieService = movieService;
     }
 
-    @GetMapping("?page={page}&size={size}")
-    public List<Movie> getMovies(@PathVariable("page") Integer page, @PathVariable("size") Integer size) {
+    @GetMapping("")
+    public List<Movie> getMovies(@RequestParam("page") Integer page, @RequestParam("page_size") Integer size) {
         return movieService.getMoviePage(page, size);
     }
 
