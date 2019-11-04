@@ -20,9 +20,9 @@ public class RoleService {
         this.roleResource = roleResource;
     }
 
-    public Page<Role> getRolePage(int page, int size) {
+    public List<Role> getRolePage(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return roleResource.findRolesBy(pageable);
+        return roleResource.findRolesBy(pageable).getContent();
     }
 
     public List<Role> getRolesByActorId(Long actorId) {

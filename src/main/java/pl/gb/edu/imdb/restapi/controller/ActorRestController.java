@@ -24,18 +24,18 @@ public class ActorRestController {
         this.roleService = roleService;
     }
 
-    @GetMapping("?page={page}&size={size}")
-    public ResponseEntity<Page<Actor>> getActors(@PathVariable("page") Integer page, @PathVariable("size") Integer size) {
-        return new ResponseEntity<>(actorService.getActors(page, size), HttpStatus.OK);
+    @GetMapping(value = "")
+    public List<Actor> getActors(@RequestParam("page") Integer page, @RequestParam("page_size") Integer size) {
+        return actorService.getActors(page, size);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Actor> getActorById(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(actorService.getActorById(id), HttpStatus.OK);
+    public Actor getActorById(@PathVariable("id") Long id) {
+        return actorService.getActorById(id);
     }
 
     @GetMapping("/{id}/appearances")
-    public ResponseEntity<List<Role>> showActorRoles(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(roleService.getRolesByActorId(id), HttpStatus.OK);
+    public List<Role> showActorRoles(@PathVariable("id") Long id) {
+        return roleService.getRolesByActorId(id);
     }
 }

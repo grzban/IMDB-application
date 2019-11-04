@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import pl.gb.edu.imdb.restapi.model.Movie;
 import pl.gb.edu.imdb.restapi.resource.MovieResource;
 
+import java.util.List;
+
 @Service
 public class MovieService {
     private MovieResource movieResource;
@@ -17,9 +19,9 @@ public class MovieService {
         this.movieResource = movieResource;
     }
 
-    public Page<Movie> getMoviePage(int page, int size) {
+    public List<Movie> getMoviePage(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return movieResource.findMoviesBy(pageable);
+        return movieResource.findMoviesBy(pageable).getContent();
     }
 
     public Movie getMovieById(Long id) {

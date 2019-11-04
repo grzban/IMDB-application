@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import pl.gb.edu.imdb.restapi.model.Actor;
 import pl.gb.edu.imdb.restapi.resource.ActorResource;
 
+import java.util.List;
+
 @Service
 public class ActorService {
 
@@ -18,9 +20,9 @@ public class ActorService {
         this.actorResource = actorResource;
     }
 
-    public Page<Actor> getActors(int page, int size) {
+    public List<Actor> getActors(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return actorResource.findActorsBy(pageable);
+        return actorResource.findActorsBy(pageable).getContent();
     }
 
     public Actor getActorById(Long id) {
