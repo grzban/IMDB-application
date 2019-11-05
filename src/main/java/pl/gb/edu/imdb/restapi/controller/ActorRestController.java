@@ -3,11 +3,11 @@ package pl.gb.edu.imdb.restapi.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.gb.edu.imdb.restapi.model.Actor;
-import pl.gb.edu.imdb.restapi.model.Role;
 import pl.gb.edu.imdb.restapi.service.ActorService;
 import pl.gb.edu.imdb.restapi.service.RoleService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/actors")
@@ -32,7 +32,7 @@ public class ActorRestController {
     }
 
     @GetMapping("/{id}/appearances")
-    public List<Role> showActorRoles(@PathVariable("id") Long id) {
+    public List<Map<String, Object>> showActorRoles(@PathVariable("id") Long id) {
         return roleService.getRolesByActorId(id);
     }
 }

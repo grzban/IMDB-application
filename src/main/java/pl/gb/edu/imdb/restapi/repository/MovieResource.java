@@ -9,4 +9,5 @@ import pl.gb.edu.imdb.restapi.model.Movie;
 @Repository
 public interface MovieResource extends PagingAndSortingRepository<Movie, Long> {
     Page<Movie> findMoviesBy(Pageable pageable);
+    Movie findMovieById(Long id);
 }
