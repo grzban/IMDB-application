@@ -15,7 +15,6 @@ import javax.persistence.Table;
 public class Actor {
     @Id
     private long id;
-
     @Column
     private String name;
 }

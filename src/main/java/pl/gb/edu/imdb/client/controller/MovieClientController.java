@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MovieClientController {
-    @GetMapping("/movies")
+    @GetMapping("/movie")
     public String index() {
-        return "index";
+        return "movie";
     }
 }
