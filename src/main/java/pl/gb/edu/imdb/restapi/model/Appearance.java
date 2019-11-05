@@ -2,7 +2,7 @@ package pl.gb.edu.imdb.restapi.model;
 
 import lombok.Getter;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Getter
@@ -18,7 +18,7 @@ public class Appearance {
     }
 
     public Map<String, Object> getAppearance() {
-        Map<String, Object> appearance = new HashMap<>();
+        Map<String, Object> appearance = new LinkedHashMap<>();
         appearance.put("movie_id", movieId);
         appearance.put("movie_name", movieName);
         appearance.put("character_name", character);
