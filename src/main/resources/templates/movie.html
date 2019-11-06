@@ -10,9 +10,13 @@
                     <h4 class="card-title">
                         <div class="article__content">
                             <p class="text-justify">
-                            <h4>
-                            Movies
-                            </h4>
+                            <h4>Movie</h4>
+                            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                                <div class="card-header" th:text="${movie.title}"></div>
+                                <div class="card-body text-primary">
+                                    <h5 class="card-title" th:text="${movie.year}"></h5>
+                                </div>
+                            </div>
                             </p>
                         </div>
                     </h4>
@@ -21,4 +25,5 @@
         </div>
     </div>
 </article>
-<section class="content-header" th:replace="footer.html"></section>
+<section class=" content-header
+                                    " th:replace="footer.html"></section>

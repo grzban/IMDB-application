@@ -10,15 +10,19 @@
                     <h4 class="card-title">
                         <div class="article__content">
                             <p class="text-justify">
-                            <h4>Actor</h4>
-                            <div class="card border-primary mb-3" style="max-width: 20rem;">
-                                <div class="card-header" th:text="${actor.name}"></div>
-                            </div>
+                            <h4>
+                                Movies
+                            </h4>
                             <table class="table table-striped">
-                                <tr th:each="appearance : ${appearances}">
-                                    <td th:text="${appearance.movie_id}"></td>
-                                    <td th:text="${appearance.movie_name}"></td>
-                                    <td th:text="${appearance.character_name}"></td>
+                                <tr th:each="movie : ${movies}">
+                                    <form th:action="@{'/movie/{id}'(id=${movie.id})}">
+                                        <td th:text="${movie.id}"></td>
+                                        <td th:text="${movie.title}"></td>
+                                        <td th:text="${movie.year}"></td>
+                                        <td>
+                                            <button type="submit" class="btn btn-success">Show</button>
+                                        </td>
+                                    </form>
                                 </tr>
                             </table>
                             </p>
@@ -29,5 +33,4 @@
         </div>
     </div>
 </article>
-<section class=" content-header
-                                    " th:replace="footer.html"></section>
+<section class="content-header" th:replace="footer.html"></section>
