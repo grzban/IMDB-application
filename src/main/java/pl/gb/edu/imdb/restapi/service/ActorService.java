@@ -20,8 +20,7 @@ public class ActorService {
         this.actorResource = actorResource;
     }
 
-    public List<Actor> getActors(int page, int size) {
-        Pageable pageable = PageRequest.of(page, size);
+    public List<Actor> getActors(Pageable pageable) {
         return actorResource.findActorsBy(pageable).getContent();
     }
 

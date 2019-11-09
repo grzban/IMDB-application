@@ -20,7 +20,7 @@ public class ActorClientController {
 
     @GetMapping("")
     public String showActors(Model model) {
-        model.addAttribute("actors", actorClientService.getActors(0, 10));
+        model.addAttribute("actors", actorClientService.getActors(0, 5));
         return "actors";
     }
 
