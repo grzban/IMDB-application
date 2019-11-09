@@ -3,7 +3,6 @@ package pl.gb.edu.imdb.restapi.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gb.edu.imdb.restapi.model.Appearance;
-import pl.gb.edu.imdb.restapi.model.Role;
 import pl.gb.edu.imdb.restapi.repository.MovieResource;
 import pl.gb.edu.imdb.restapi.repository.RoleResource;
 
@@ -24,12 +23,12 @@ public class RoleService {
 
     public List<Map<String, Object>> getRolesByActorId(Long actorId) {
         List<Map<String, Object>> appearances = new ArrayList<>();
-        for (Role role : roleResource.findRolesByActorId(actorId)) {
+        roleResource.findRolesByActorId(actorId).forEach(role -> {
             Long movieId = role.getMovieId();
             String movieName = movieResource.findMovieById(role.getMovieId()).getTitle();
             String character = role.getCharacter();
             appearances.add(new Appearance(movieId, movieName, character).getAppearance());
-        }
+        });
         return appearances;
 
     }
